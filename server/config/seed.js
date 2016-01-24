@@ -30,11 +30,6 @@ User.find({}).removeAsync()
   .then(() => {
     User.createAsync({
       provider: 'local',
-      name: 'Test User',
-      email: 'test@example.com',
-      password: 'test'
-    }, {
-      provider: 'local',
       role: 'admin',
       name: 'Admin',
       email: 'admin@example.com',
@@ -43,15 +38,15 @@ User.find({}).removeAsync()
       provider: 'local',
       role: 'school',
       name: 'The English School',
-      email: 'tes@example.com',
+      email: 'colegio@colegio.com',
       password: 'school'
     }, {
       provider: 'local',
       role: 'parent',
-      name: 'Esteban Trueba',
-      email: 'esteban.trueba@example.com',
-      password: 'parent'
-    })
+      name: 'Gabriel Reyes',
+      email: 'greyes1990@gmail.com',
+      password: 'test'
+      })
     .then(() => {
       console.log('finished populating users');
     });

@@ -3,7 +3,7 @@
 
 angular.module('commonAppEccoleApp.constants', [])
 
-.constant('appConfig', {userRoles:['guest','user','admin']})
+.constant('appConfig', {userRoles:['school','admin','parent']})
 
 ;
 })(angular);

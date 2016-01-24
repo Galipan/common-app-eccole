@@ -19,8 +19,8 @@ class NavbarController {
   constructor(Auth) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
-    this.isParent = Auth.isParent;
-    this.isSchool = Auth.isSchool;
+    this.isSchool = Auth.isSchool()  && Auth.isLoggedIn();
+    this.isParent = Auth.isParent()  && Auth.isLoggedIn();
     this.getCurrentUser = Auth.getCurrentUser;
   }
 }
