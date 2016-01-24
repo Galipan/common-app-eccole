@@ -18,11 +18,12 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Registrar Estudiante</a></li>
+        <li ng-show="nav.isParent()" ui-sref-active="active"><a ui-sref="signup">Registrar Estudiante</a></li>
+        <li ng-show="nav.isSchool()" ui-sref-active="active"><a ui-sref="signup">Manejar Aplicaciones</a></li>
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Iniciar Sesión</a></li>
-        <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
+        <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Bienvenido, {{ nav.getCurrentUser().name }}!</p> </li>
         <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+        <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Cerrar Sesión</a></li>
       </ul>
     </div>
   </div>
