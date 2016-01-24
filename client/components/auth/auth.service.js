@@ -177,7 +177,8 @@ function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
 
     isParent() {
       return Auth.hasRole
-        .apply(Auth, [].concat.apply(['parent'], arguments));
+        .apply(Auth, [].concat.apply(['parent'], arguments)) && !Auth.hasRole
+          .apply(Auth, [].concat.apply(['school'], arguments));
     },
 
     /**
