@@ -8,6 +8,9 @@ class NavbarController {
   }, {
     title: 'Para Padres',
     state: 'parents'
+  }, {
+    title: 'Para Colegios',
+    state: 'schools'
   }];
 
   isCollapsed = true;
