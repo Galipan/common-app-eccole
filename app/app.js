@@ -6,8 +6,7 @@ angular.module('aplicaleApp', [
     'aplicaleApp.menu',
     'aplicaleApp.parents',
     'aplicaleApp.schools',
-    'aplicaleApp.admin',
-    'aplicaleApp.version'
+    'aplicaleApp.admin'
 ]).
 config( function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/colegios");
@@ -16,7 +15,14 @@ config( function ($stateProvider, $urlRouterProvider) {
         .state('parents', {
             url: '/padres',
             templateUrl: 'parents/parents.html',
-            controller: 'parentsCtrl'
+            controller: 'parentsCtrl',
+            data: {
+                user: {
+                    name: 'Carlos Valderrama',
+                    username: 'cvalderrama',
+                    role: 'parent'
+                }
+            }
         })
         .state('schools', {
             url: '/colegios',
