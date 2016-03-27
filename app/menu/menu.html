@@ -1,0 +1,29 @@
+<div ng-controller="MenuCtrl" ng-init="setup()" class="{{getNavClasses()}}">
+    <div class="mock-nav">
+
+        <div id="bottom" ng-class="{'left-collapsed': leftCollapsed}">
+
+            <div id="left-nav">
+                <div>
+                    <ul id="pages-menu">
+                        <li ng-repeat="topNav in topNavs"
+                            class="top-level-item {{topNav.className}}">
+                                <span class="menu-trigger" ui-sref="{{topNav.state}}">
+                                    <div class="menu-title">{{topNav.title}}</div>
+                                    <span class="menu-icon {{topNav.icon}}"></span>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="content-wrapper">
+                <div ui-view></div>
+
+                <pre>{{topNavs | json}}</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="menu/menu.css" rel="stylesheet" type="text/css">
