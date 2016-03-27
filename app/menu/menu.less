@@ -30,16 +30,20 @@ body {
 
 #top {
   position: relative;
-  background-color: #f5f5f5;
+  background-color: @lightBlack;
   z-index: 10;
-
+  color: ghostwhite;
   display: block;
 
-  #top-top {
+  #top-left {
     background-color: @lightBlack;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: inline-block;
+
+  }
+
+  #top-right{
+    float: right;
+    position: relative;
   }
 }
 
@@ -690,6 +694,6 @@ body {
   }
 }
 
-.mock-nav {
+.main-nav {
   position: relative;
 }

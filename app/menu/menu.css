@@ -13,15 +13,18 @@ body {
 }
 #top {
   position: relative;
-  background-color: #f5f5f5;
+  background-color: #282d2a;
   z-index: 10;
+  color: ghostwhite;
   display: block;
 }
-#top #top-top {
+#top #top-left {
   background-color: #282d2a;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: inline-block;
+}
+#top #top-right {
+  float: right;
+  position: relative;
 }
 #pages-menu {
   padding: 0;
@@ -511,6 +514,6 @@ body {
   border-bottom: 3px solid #03ace6;
   color: black;
 }
-.mock-nav {
+.main-nav {
   position: relative;
 }

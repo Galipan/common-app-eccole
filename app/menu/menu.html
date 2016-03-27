@@ -1,6 +1,11 @@
 <div ng-controller="MenuCtrl" ng-init="setup()" class="{{getNavClasses()}}">
-    <div class="mock-nav">
-
+    <div class="main-nav">
+        <div id="top">
+            <div id="top-left">
+                <span>APLICALE!</span>
+            </div>
+            <div id="top-right">Logout</div>
+        </div>
         <div id="bottom" ng-class="{'left-collapsed': leftCollapsed}">
 
             <div id="left-nav">
@@ -19,8 +24,6 @@
 
             <div id="content-wrapper">
                 <div ui-view></div>
-
-                <pre>{{topNavs | json}}</pre>
             </div>
         </div>
     </div>
